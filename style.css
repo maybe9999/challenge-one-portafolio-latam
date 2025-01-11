@@ -62,9 +62,13 @@ a {
     padding: 0; /* Elimina relleno */
 }
 
+.navegacion__correo{
+    font-weight: 700;
+}
+
 .navegacion__elemento a {
     font-size: 0.9rem; /* Tamaño del texto */
-    color: #007bff; /* Color de los enlaces */
+    color: --color-de-link; /* Color de los enlaces */
     text-decoration: none; /* Elimina subrayado */
     padding: 5px 10px; /* Espaciado interno en los enlaces */
     transition: color 0.3s ease; /* Transición de color suave */
@@ -97,6 +101,7 @@ a {
    justify-content: space-between;
    flex-direction: column; /* Apila los elementos verticalmente */
    gap: 8px; /* Espaciado entre el título, subtítulo y formulario */
+   width: auto;
    margin: 0 auto; /* Centra horizontalmente */ 
    padding: 15px 0px;   
 }
@@ -239,7 +244,7 @@ a {
     bottom: 40px; /* Separación desde la parte inferior */
     left: 10px; /* Separación desde la izquierda */
     width: 32px; /* Tamaño del ícono más pequeño */
-    height: 37px;
+    height: auto;
 }
 
 /* Nombre de la habilidad */
@@ -248,7 +253,7 @@ a {
     left: 10px; /* Alineado con el ícono */
     
     font-size: 14px;
-    font-weight: 500; /* Negrita ligera */
+    font-weight: bold; /* Negrita ligera */
     color: #555;
 }
 
@@ -267,7 +272,7 @@ a {
     bottom: 40px; /* Separación desde la parte inferior */
     left: 10px; /* Separación desde la izquierda */
     width: 32px; /* Tamaño del ícono más pequeño */
-    height: 40px;
+    height: auto;
 }
 
 .aficiones__nombre {
@@ -275,7 +280,7 @@ a {
     bottom: 10px; /* Justo debajo del ícono */
     left: 10px; /* Alineado con el ícono */
     font-size: 14px;
-    font-weight: 500; /* Negrita ligera */
+    font-weight: bold; /* Negrita ligera */
     color: #555;
 }
 
@@ -518,11 +523,14 @@ a {
 
 /*------------------------------ Sección de Pie de Página ---------------------------------*/
 
-.rodapie__container{
-    align-items: center;
+.footer{
     background-color: #FFFFFF;
     padding: 32px;
     gap: 10px;
+}
+
+.footer_parrafo{
+    text-align: center;
 }
 
 /* ------------------------------ Responsividad ---------------------------------------*/
@@ -531,11 +539,53 @@ a {
 
 /* Estilos generales para tablet*/
 @media (min-width: 768px) {
+    /*Presentacion*/
+    .presentacion{
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 15px;
+        width: auto;
+    }
+
+    .presentacion__foto{
+        width: 20%;
+        height: 20%;
+    }
+
+    .sobre-mi__firma {
+        max-width: 20%;
+    }
+
+    .habilidades-y-aficciones__elemento {
+        width: 30%;
+        height: calc(100vw* 0.16);
+    }
+
+    .formacion__icono {
+        padding: 30px 20%;
+        border: none;
+    }
+
+    .formacion__lista{
+        flex-direction: row;
+    }
+
+    .formacion__elemento{
+
+        width:32%;
+    }
+
 }
+
 
 /* Estilos para desktop */
 @media (min-width: 1024px){
-   
+    .navegacion__lista {
+        display: flex;
+    }
+    .navegacion__correo{
+        display: none;
+    }
 }
 
 
